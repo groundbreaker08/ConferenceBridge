@@ -66,6 +66,18 @@ return [
             'engine' => null,
         ],
 
+        'confbr' => [
+            'driver'    => 'mysql',
+            'host'      => env('CONFBR_DB_HOST', 'localhost'),
+            'database'  => env('CONFBR_DB_DATABASE', 'forge'),
+            'username'  => env('CONFBR_DB_USERNAME', 'forge'),
+            'password'  => env('CONFBR_DB_PASSWORD', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
+        
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),

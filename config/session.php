@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'lifetime' => 120,
+    'lifetime' => 120,#2hours
 
     'expire_on_close' => false,
 
@@ -122,7 +122,7 @@ return [
     |
     */
 
-    'path' => '/',
+    'path' => 'conferencebridge',
 
     /*
     |--------------------------------------------------------------------------

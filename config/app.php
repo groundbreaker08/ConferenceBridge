@@ -16,6 +16,18 @@ return [
     'env' => env('APP_ENV', 'production'),
 
     /*
+    | Custom Add
+    |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | Add Application Name, mostly used for titles to be shown in your application.
+    |
+    */
+    
+    'name'  =>  env('APP_NAME',null),
+    
+    /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
     |--------------------------------------------------------------------------
@@ -52,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Hong_Kong',
 
     /*
     |--------------------------------------------------------------------------
@@ -147,7 +159,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
@@ -155,6 +166,41 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        /*
+         * Added Provider
+         */
+        App\Providers\CheckRoomAvailability::class,
+        App\Providers\VerificationProvider::class,
+        App\Providers\OldPasswordServiceProvider::class,
+
+        /*
+         * Intervention image
+         */
+        #Intervention\Image\ImageServiceProvider::class,
+
+        /*
+         * Laravel Image
+         * https://github.com/Folkloreatelier/laravel-image
+         */
+        Folklore\Image\ImageServiceProvider::class,
+
+        /*
+         * ReCaptcha
+         * https://github.com/anhskohbo/no-captcha
+         */
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+
+        /*
+         * Email Verification
+         * https://github.com/edvinaskrucas/laravel-user-email-verification
+         */
+        Krucas\LaravelUserEmailVerification\UserEmailVerificationServiceProvider::class,
+
+        /*
+         * Entrust - Role and Permission
+         * https://github.com/Zizaco/entrust
+         */
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
     ],
 
@@ -202,6 +248,22 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /*
+         * Intervention image Facade
+         */
+        #'Image' => Intervention\Image\Facades\Image::class
+
+        /*
+         * Laravel Image
+         * https://github.com/Folkloreatelier/laravel-image
+         */
+        'Image' => Folklore\Image\Facades\Image::class,
+
+        /*
+         * Entrust - Role and Permission
+         * https://github.com/Zizaco/entrust
+         */
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];

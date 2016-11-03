@@ -1,6 +1,7 @@
 @extends('layouts.app')
-
-<!-- Main Content -->
+@section('header_css')
+    <link href="{{secure_asset('assets/css/materialize/font.css')}}" rel="stylesheet">
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -34,7 +35,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-envelope"></i> Send Password Reset Link
+                                    <i class="tiny material-icons">email</i> Send Password Reset Link
                                 </button>
                             </div>
                         </div>

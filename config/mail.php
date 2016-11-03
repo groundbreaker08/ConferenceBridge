@@ -55,7 +55,8 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    #'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'sonic-manager@sonic-teleservices.com', 'name' => 'Sonic'],
 
     /*
     |--------------------------------------------------------------------------

@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -79,7 +80,18 @@ return [
     'timezone'             => 'The :attribute must be a valid zone.',
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
-
+    /*
+	 * Additional validation
+	 */
+    'check_current_time'   => 'The [:attribute] is LESS THAN or TOO NEAR the current date time.',
+    'valid_start_time'     => 'The [:attribute] is greater than the end time.',
+    'valid_end_time'       => 'The :attribute is less than the start time.',
+    'is_bridge_available'  => 'There is no AVAILABLE BRIDGE at the selected :attribute range .',
+    'is_room_available'    => 'ROOM is NOT AVAILABLE at the selected time range .',
+    'available_on_update'  => 'The venue is ALREADY BOOKED at the selected :attribute range.',
+    'duration'             => 'The :attribute range is NOT A VALID duration.',
+    'verified'             => ':verified is already verified!',
+    'old_password_confirmed'=>'Your :attribute does not match with our records.',
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -94,6 +106,21 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
+        ],
+        'recipient' =>  [
+            'required'  =>  'You need to select at least one email address in your contacts.'
+        ],
+        'type'  =>  [
+            'required'  =>  'You need to select what type of conference.'
+        ],
+        'title' =>  [
+            'required'  =>  'A title for your invitation is required.'
+        ],
+        'place' =>  [
+            'required'  =>  'Please choose your ROOM.'
+        ],
+        'g-recaptcha-response'  =>  [
+            'required'  =>  'reCaptcha is required.'
         ],
     ],
 
